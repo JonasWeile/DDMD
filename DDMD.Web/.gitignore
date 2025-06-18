@@ -1,0 +1,56 @@
+## Build folders
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## VS Code
+.vscode/
+
+## OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+## ASP.NET publish output
+wwwroot/dist/
+wwwroot/node_modules/
+publish/
+
+## Rider IDE
+.idea/
+*.sln.iml
+
+## Logs
+*.log
+
+## dotenv and secret config
+*.env
+secrets.json
+appsettings.*.local.json
+
+## Entity Framework
+Migrations/
+
+## SQLite database (if used for dev)
+*.db
+*.sqlite
+
+## Test results
+TestResults/
+*.trx
+coverage/
+
+## npm / yarn / pnpm
+node_modules/
+
+## Package lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
