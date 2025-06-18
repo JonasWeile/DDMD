@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1e4gNTuwqTtSBcNwJ1hTD6qtPJwqtEnF/znHA9JHu2c=",
+  "Hash": "MmR5FhkLozLEbICl/U8nCcOxMKIOy267x3zwRyfN3RU=",
   "Source": "DDMD.Web",
   "BasePath": "_content/DDMD.Web",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "Q:\\CodingStuff\\Projects\\DDMD\\DDMD.Web\\wwwroot\\images\\1c631da8.png",
+      "SourceId": "DDMD.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "Q:\\CodingStuff\\Projects\\DDMD\\DDMD.Web\\wwwroot\\",
+      "BasePath": "_content/DDMD.Web",
+      "RelativePath": "images/1c631da8.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1c631da8.png"
     },
     {
       "Identity": "Q:\\CodingStuff\\Projects\\DDMD\\DDMD.Web\\wwwroot\\js\\site.js",

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DDMD.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23e721a2b159ef5feb9e721823d30c5f9c85bd1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DDMD.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DDMD.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

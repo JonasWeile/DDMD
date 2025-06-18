@@ -29,3 +29,4 @@ Q:\CodingStuff\Projects\DDMD\DDMD.Web\obj\Debug\net7.0\refint\DDMD.Web.dll
 Q:\CodingStuff\Projects\DDMD\DDMD.Web\obj\Debug\net7.0\DDMD.Web.pdb
 Q:\CodingStuff\Projects\DDMD\DDMD.Web\obj\Debug\net7.0\DDMD.Web.genruntimeconfig.cache
 Q:\CodingStuff\Projects\DDMD\DDMD.Web\obj\Debug\net7.0\ref\DDMD.Web.dll
+Q:\CodingStuff\Projects\DDMD\DDMD.Web\obj\Debug\net7.0\DDMD.Web.sourcelink.json

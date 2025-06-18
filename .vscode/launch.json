@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C#: DDMD.Web Debug",
+      "type": "dotnet",
+      "request": "launch",
+      "projectPath": "${workspaceFolder}/DDMD.Web/DDMD.Web.csproj"
+    }
+  ]
+}

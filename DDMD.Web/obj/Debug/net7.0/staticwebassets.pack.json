@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "Q:\\CodingStuff\\Projects\\DDMD\\DDMD.Web\\wwwroot\\images\\1c631da8.png",
+      "PackagePath": "staticwebassets\\images\\1c631da8.png"
+    },
+    {
       "Id": "Q:\\CodingStuff\\Projects\\DDMD\\DDMD.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
