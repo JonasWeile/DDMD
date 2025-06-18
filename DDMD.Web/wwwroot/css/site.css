@@ -20,3 +20,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+@keyframes pop-heart {
+    0%   { transform: scale(1); opacity: 1; }
+    40%  { transform: scale(1.4); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-like {
+    animation: pop-heart 0.35s ease-in-out;
+    color: #e0245e; /* nice heart red */
+}
+

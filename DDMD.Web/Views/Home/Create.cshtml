@@ -5,7 +5,7 @@
 
 <h2>Opret nyt opslag</h2>
 
-<form asp-action="Create" method="post">
+<form asp-action="Create" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label asp-for="Author" class="form-label">Navn</label>
         <input asp-for="Author" class="form-control" />
@@ -19,9 +19,10 @@
     </div>
 
     <div class="mb-3">
-        <label asp-for="ImageUrl" class="form-label">Billed-URL (valgfri)</label>
-        <input asp-for="ImageUrl" class="form-control" />
+        <label class="form-label">Upload billede (valgfrit)</label>
+        <input type="file" name="imageFile" class="form-control" />
     </div>
+
 
     <button type="submit" class="btn btn-primary">Opret opslag</button>
 </form>

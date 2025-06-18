@@ -40,21 +40,55 @@ public class HomeController : Controller
         {
             return View();
         }
-        
-        [HttpPost]
-        public IActionResult Create(Post post)
+
+       [HttpPost]
+    public async Task<IActionResult> Create(Post post, IFormFile imageFile)
+    {
+        if (ModelState.IsValid)
         {
-            if (ModelState.IsValid)
+            if (imageFile != null && imageFile.Length > 0)
             {
-                post.CreatedAt = DateTime.Now;
-                _db.Posts.Add(post);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                // Ensure the folder exists
+                Directory.CreateDirectory(uploadsFolder);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await imageFile.CopyToAsync(stream);
+                }
+
+                post.ImageUrl = "/images/" + uniqueFileName;
             }
-        
-            return View(post);
+
+            post.CreatedAt = DateTime.Now;
+            _db.Posts.Add(post);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
         }
-        
+
+        return View(post);
+    }
+
+    [HttpPost]
+    public IActionResult Like(int id)
+    {
+        var post = _db.Posts.FirstOrDefault(p => p.Id == id);
+        if (post == null)
+        {
+            return NotFound();
+        }
+    
+        post.Likes += 1;
+        _db.SaveChanges();
+    
+        return Json(new { success = true, newLikeCount = post.Likes });
+    }
+
+
 
     public IActionResult Om() => View();
 

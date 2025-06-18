@@ -23,10 +23,48 @@
                 }
 
                 <div class="d-flex align-items-center">
-                    <button class="btn btn-outline-primary btn-sm me-2" disabled>👍 Synes godt om</button>
-                    <span class="text-muted">@post.Likes synes godt om</span>
+                    <button class="btn btn-outline-primary btn-sm me-2 like-button" data-post-id="@post.Id">
+                        ❤️ <span class="like-label">Synes godt om</span>
+                    </button>
+                    <span class="text-muted" id="like-count-@post.Id">@post.Likes synes godt om</span>
                 </div>
+
             </div>
         </div>
     }
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.like-button').forEach(button => {
+                button.addEventListener('click', async () => {
+                    const postId = button.dataset.postId;
+
+                    // Add animation class
+                    button.classList.add('animate-like');
+
+                    // Remove it again after animation ends
+                    button.addEventListener('animationend', () => {
+                        button.classList.remove('animate-like');
+                    }, { once: true });
+
+                    // Send like
+                    const response = await fetch('/Home/Like', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: `id=${postId}`
+                    });
+
+                    const data = await response.json();
+                    if (data.success) {
+                        const likeCountElement = document.getElementById(`like-count-${postId}`);
+                        likeCountElement.textContent = `${data.newLikeCount} synes godt om`;
+                    }
+                });
+            });
+        });
+    </script>
+}
